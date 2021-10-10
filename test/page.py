@@ -1,10 +1,7 @@
-from time import sleep
 import random
-from element import BasePageElement
 from locators import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 
 
 class BasePage(object):
@@ -13,7 +10,7 @@ class BasePage(object):
         self.driver = driver
 
 
-class SearchTextElement(BasePageElement):
+class SearchTextElement(BasePage):
     page_title = 'Clickity Click Tech Skill Task'
 
 
