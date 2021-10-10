@@ -9,7 +9,11 @@ from locators import *
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('window-size=1920x1080')
+        chrome_options.add_argument('--headless')
+        self.driver = webdriver.Chrome(options=chrome_options)
+        self.driver.maximize_window()
         self.driver.get("https://palaikykalu.lt/QA_Task.html")
 
     def test_correct_grid_size(self):
