@@ -10,7 +10,7 @@ class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
-        self.driver.get("file:///C:/Users/ignas.asmena/Desktop/QA_Task.html")
+        self.driver.get("https://palaikykalu.lt/QA_Task.html")
 
     def test_correct_grid_size(self):
         main_page = page.MainPage(self.driver)
